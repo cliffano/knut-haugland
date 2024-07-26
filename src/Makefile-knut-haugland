@@ -1,11 +1,9 @@
-# KON_TIKI_GITHUB_TOKEN is used for git clone https and github_actions_secret authentication
-ifndef KON_TIKI_GITHUB_TOKEN
-    $(error Please specify KON_TIKI_GITHUB_TOKEN)
+# GITHUB_TOKEN is used for git clone https and github_actions_secret authentication
+ifndef GITHUB_TOKEN
+    $(error Please specify GITHUB_TOKEN)
 endif
-# KON_TIKI_GH_TOKEN is used for gh within GitHub Actions https://cli.github.com/manual/gh_auth_login
-ifndef KON_TIKI_GH_TOKEN
-    $(error Please specify KON_TIKI_GH_TOKEN)
-endif
+# GH_TOKEN is used for gh within GitHub Actions https://cli.github.com/manual/gh_auth_login
+GH_TOKEN=GITHUB_TOKEN
 
 ################################################################
 # KnutHaugland: Makefile for building Kon-Tiki sites
@@ -37,7 +35,7 @@ $(info - Bucket name: ${BUCKET_NAME})
 
 TF_VARS=config/terraform.tfvars
 TF_BACKEND=config/backend.tf
-export TF_VAR_github_token=${KON_TIKI_GITHUB_TOKEN}
+export TF_VAR_github_token=${GITHUB_TOKEN}
 export AWS_DEFAULT_REGION=${BUCKET_REGION}
 
 ################################################################
@@ -60,7 +58,7 @@ clean:
 
 # Retrieve the Pyhon package dependencies
 deps: stage
-	cd stage && git clone "https://x-access-token:$(KON_TIKI_GITHUB_TOKEN)@github.com/cliffano/terraform-kon-tiki-studio.git"
+	cd stage && git clone "https://x-access-token:$(GITHUB_TOKEN)@github.com/cliffano/terraform-kon-tiki-studio.git"
 	bob dep
 
 # Update Makefile to the latest version on origin's main branch
