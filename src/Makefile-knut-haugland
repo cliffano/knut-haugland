@@ -19,24 +19,24 @@ KNUT_HAUGLAND_VERSION = 0.9.0-pre.0
 # and they will be parsed using yq https://github.com/mikefarah/yq
 # Example:
 # ---
-# bucket_region: ap-southeast-2
+# aws_region: ap-southeast-2
 # bucket_name: www.knuthaugland.com
 
-# BUCKET_REGION is the name of the AWS region where the S3 bucket is located
-BUCKET_REGION=$(shell yq .bucket_region knut-haugland.yml)
+# AWS_REGION is the name of the AWS region where the S3 bucket is located
+AWS_REGION=$(shell yq .aws_region knut-haugland.yml)
 
 # BUCKET_NAME is the name of the AWS S3 bucket where the site is deployed
 BUCKET_NAME ?= $(shell yq .bucket_name knut-haugland.yml)
 
 $(info ################################################################)
 $(info Building Kon-Tiki site using Knut Haugland with user configurations:)
-$(info - Bucket region: ${BUCKET_REGION})
+$(info - AWS region: ${AWS_REGION})
 $(info - Bucket name: ${BUCKET_NAME})
 
 TF_VARS=config/terraform.tfvars
 TF_BACKEND=config/backend.tf
 export TF_VAR_github_token=${GITHUB_TOKEN}
-export AWS_DEFAULT_REGION=${BUCKET_REGION}
+export AWS_DEFAULT_REGION=${AWS_REGION}
 
 ################################################################
 # Base targets
@@ -76,7 +76,7 @@ build:
 	bob site
 
 deploy:
-	aws s3 cp --recursive --region $(BUCKET_REGION) .bob/site/ae86/ s3://$(BUCKET_NAME)
+	aws s3 cp --recursive --region $(AWS_REGION) .bob/site/ae86/ s3://$(BUCKET_NAME)
 
 ################################################################
 # Publishing targets
