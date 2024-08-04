@@ -1,6 +1,6 @@
 body {
     background-color: #ffffff;
-    color: #333333;
+    color: #538392;
     font-family: roboto, helvetica, arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -9,48 +9,82 @@ body {
 }
 div#container {
     background-color: rgba(250, 250, 250);
-    color: #333333;
     margin: auto;
     padding: 0;
-    width: 512px;
+    width: 1024px;
+}
+div#navbar {
+    background-color: #538392;
+    font-family: vt323, helvetica, arial, sans-serif;
+    padding: 10px 30px;
+    text-align: left;
+    text-transform: uppercase;
+}
+div#nav {
+    font-size: 12px;
+    margin: 0 0 30px 0;
+    padding: 0 10px;
+}
+div#nav ul {
+    list-style-type: none;
+    margin-left: 20px;
+    padding-left: 0;
+}
+div#nav a {
+    background-color: #6295a2;
+    color: #b3e2a7;
+    font-weight: bold;
+    line-height: 170%;
+    margin-right: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+div#nav a:hover {
+    background-color: #b3e2a7;
+    color: #6295a2;
 }
 div#header {
-    background-color: #e52521;
-    color: #ffffff;
+    background-color: #80b9ad;
+    color: #dddddd;
     font-family: vt323, helvetica, arial, sans-serif;
-    margin-bottom: 50px;
-    padding: 10px;
-    text-align: center;
+    margin-bottom: 10px;
+    padding: 30px 50px 30px 30px;
+    text-align: left;
     text-transform: uppercase;
 }
 div#body {
-    color: #666666;
-    padding-bottom: 50px;
+    color: #538392;
+    padding: 50px;
     text-align: left;
 }
 div#footer {
-    background-color: #e52521;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-}
-ul {
-    list-style-type: katakana;
+    background-color: #b3e2a7;
+    color: #538392;
+    text-align: left;
+    padding: 30px 50px 50px 50px;
 }
 ul li {
     margin-bottom: 10px;
 }
-a {
-    background-color: #ffffff;
-    color: #000000;
+div#body a {
+    background-color: #80B9AD;
+    color: #ffffff;
     text-decoration: none;
 }
-a:hover {
-    background-color: #e52521;
-    color: #ffffff;
+div#body a:hover {
+    background-color: #538392;
+    color: #efefef;
     text-decoration: none;
 }
 footer {
     margin-top: 10px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 20px;
+}
+img#logo {
+    margin-right: 10px;
 }
