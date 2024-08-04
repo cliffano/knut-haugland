@@ -1,6 +1,6 @@
 body {
     background-color: #ffffff;
-    color: #333333;
+    color: #538392;
     font-family: roboto, helvetica, arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -9,48 +9,61 @@ body {
 }
 div#container {
     background-color: rgba(250, 250, 250);
-    color: #333333;
     margin: auto;
     padding: 0;
-    width: 512px;
+    width: 1024px;
 }
 div#header {
-    background-color: #e52521;
-    color: #ffffff;
+    background-color: #80b9ad;
+    color: #028391;
     font-family: vt323, helvetica, arial, sans-serif;
-    margin-bottom: 50px;
-    padding: 10px;
-    text-align: center;
+    margin-bottom: 10px;
+    padding: 30px 50px 30px 30px;
+    text-align: left;
     text-transform: uppercase;
 }
 div#body {
-    color: #666666;
-    padding-bottom: 50px;
+    color: #538392;
+    padding: 50px;
     text-align: left;
 }
 div#footer {
-    background-color: #e52521;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
+    background-color: #b3e2a7;
+    color: #538392;
+    text-align: left;
+    padding: 30px 50px 50px 50px;
 }
-ul {
-    list-style-type: katakana;
+div#footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+div#footer a:hover {
+    background-color: #80B9AD;
+    color: #ffffff;
+    text-decoration: none;
 }
 ul li {
     margin-bottom: 10px;
 }
-a {
-    background-color: #ffffff;
-    color: #000000;
+div#body a {
+    background-color: #80B9AD;
+    color: #ffffff;
     text-decoration: none;
 }
-a:hover {
-    background-color: #e52521;
-    color: #ffffff;
+div#body a:hover {
+    background-color: #538392;
+    color: #efefef;
     text-decoration: none;
 }
 footer {
     margin-top: 10px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 20px;
+}
+img#logo {
+    margin-right: 10px;
 }

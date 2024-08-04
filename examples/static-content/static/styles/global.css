@@ -45,7 +45,7 @@ div#nav a:hover {
 }
 div#header {
     background-color: #80b9ad;
-    color: #dddddd;
+    color: #028391;
     font-family: vt323, helvetica, arial, sans-serif;
     margin-bottom: 10px;
     padding: 30px 50px 30px 30px;
@@ -62,6 +62,15 @@ div#footer {
     color: #538392;
     text-align: left;
     padding: 30px 50px 50px 50px;
+}
+div#footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+div#footer a:hover {
+    background-color: #80B9AD;
+    color: #ffffff;
+    text-decoration: none;
 }
 ul li {
     margin-bottom: 10px;
