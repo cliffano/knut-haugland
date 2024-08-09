@@ -7,7 +7,7 @@ Knut Haugland
 -------------
 
 Knut Haugland is a Makefile for creating Kon-Tiki static web sites.
-It provides utility targets for linting, building, deploying, and managing the infrastructure of the static web sites.
+It provides utility targets for building, deploying, and managing the infrastructure of the static web sites.
 
 Have a look at [examples/](examples/) for example projects of how Knut Haugland can be used.
 
@@ -46,7 +46,7 @@ The following targets are available:
 | deps | Retrieve package dependencies using [Bob](https://github.com/cliffano/bob/) |
 | update-to-latest | Update Makefile to the latest version on origin's main branch |
 | update-to-version | Update Makefile to the version defined in `TARGET_KNUT_HAUGLAND_VERSION` parameter |
-| build | Build the static web site using [AE86]](https://pypi.org/project/pylint-report/) |
+| build | Build the static web site using [AE86](https://github.com/cliffano/ae86/) |
 | deploy | Sends the built static web site code to AWS S3 bucket |
 | publish | A convenient target for running: clean deps init build deploy |
 | infra-<init|destroy|refresh|plan|apply|import> | Targets for managing the infrastructure built using [Terraform AWS Kon-Tiki](https://github.com/cliffano/terraform-aws-kon-tiki/) |
