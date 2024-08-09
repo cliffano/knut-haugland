@@ -5,7 +5,7 @@ const sitemap = JSON.parse(fs.readFileSync('./data/sitemap.json'));
 
 const params = {
     sitemap: sitemap,
-    redirect_url:'https://google.com'
+    redirect_url:'https://www.britannica.com/topic/Kon-Tiki-raft'
 };
 
 export {
