@@ -7,9 +7,13 @@ Knut Haugland
 -------------
 
 Knut Haugland is a Makefile for creating Kon-Tiki static web sites.
-It provides utility targets for linting, building, testing, documenting Python packages.
+It provides utility targets for linting, building, deploying, and managing the infrastructure of the static web sites.
 
-Have a look at [KnutHauglandExample](examples/) as an example project which uses Knut Haugland.
+Have a look at [examples/](examples/) for example projects of how Knut Haugland can be used.
+
+![Screenshot of example static-content web site](/screenshots/example-static-content.png "Example static-content web site")
+
+![Screenshot of example static-redirect web site](/screenshots/example-static-redirect.png "Example static-redirect web site")
 
 Installation
 ------------
